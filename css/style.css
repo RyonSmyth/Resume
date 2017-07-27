@@ -14,6 +14,19 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+.contact {
+  display: inline-block;
+  width: 25%;
+  font-size: 1em;
+  text-align: center;
+}
+
+.project-entry img {
+  width: 200px;
+  height: auto;
+  filter: grayscale(60%);
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -26,7 +39,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #2098d1;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +47,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #2098d1;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,14 +55,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #2098d1;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #2098d1;
   line-height: 17px;
 }
 
@@ -97,19 +110,20 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  padding-top: 2%;
+  display: block;
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+  color: #2098d1;
 }
 
-.orange {
-  background-color: #f5ae23;
+.blue {
+  background-color: #2098d1;
 }
 
-.orange-text {
-  color: #f5ae23;
+.blue-text {
+  color: #2098d1;
 }
 
 .white-text {
@@ -124,12 +138,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #616d7e;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #616d7e;
 }
 
 .flex-box {
@@ -145,7 +159,7 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 10px;
+  padding: 10px, 10px, 10px, 0px;
 }
 
 .center-content {
@@ -159,8 +173,8 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 200px;
-  display: none;
+  width: 300px;
+  padding-top: 2%;
 }
 
 img {
@@ -183,19 +197,36 @@ span {
   }
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
+@media only screen and (max-width: 900px) {
+  .contact {
+    font-size: .8em;
   }
 }
 
+
 @media only screen and (max-width: 750px) {
+  .contact {
+    width: 50%;
+    font-size: .8em;
+
+  }
+
+  .format-skills {
+    font-size: .8em;
+
+  }
+  #skills-h3 {
+    padding-top : 5%;
+  }
   #lets-connect {
     margin-top: 10%;
   }
   .biopic {
     width: 150px;
+    height: 160px;
+    padding-top: 5%;
   }
+
   .welcome-message {
     display: none;
   }
@@ -213,9 +244,11 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
+@media only screen and (max-width: 415px) {
+    .contact {
+    width: 50%;
+    font-size: .6em;
+    text-align: left;
+
   }
 }
