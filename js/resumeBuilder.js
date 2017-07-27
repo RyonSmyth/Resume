@@ -13,7 +13,7 @@ var bio = {
     "skills" : ["HTML", "CSS", "Javascript", "Ruby on Rails", "jQuery", "Bootstrap", "Git", "SEO"],
     "biopic" : "images/ryan.png"
 
-}
+};
 
 var education = {
 	"schools" : [
@@ -37,7 +37,19 @@ var education = {
     }
 
   ]
-}
+};
+
+var work = {
+  "jobs" : [
+    {
+      "employer" : "CareerFoundry",
+      "title" : "Full-Stack Web Development Instructor",
+      "location" : "Germany",
+      "dates" : "November 2015 - Present",
+      "description" : "Delivered high-quality training to 15+ students to build a consumer web application. Employed my knowledge of the tech industry to provide information on best practices to students. Evaluated students code and assisted with problem-solving."
+    }
+  ]
+};
 
 var projects = {
   "project" : [
@@ -52,19 +64,8 @@ var projects = {
 
     }
   ]
-}
+};
 
-var work = {
-  "jobs" : [
-    {
-      "employer" : "CareerFoundry",
-      "title" : "Full-Stack Web Development Instructor",
-      "location" : "Germany",
-      "dates" : "November 2015 - Present",
-      "description" : "Delivered high-quality training to 15+ students to build a consumer web application. Employed my knowledge of the tech industry to provide information on best practices to students. Evaluated students code and assisted with problem-solving."
-    }
-  ]
-}
 
 function dataReplace(oldString, newData) {
   var newString = oldString.replace("%data%", newData);
