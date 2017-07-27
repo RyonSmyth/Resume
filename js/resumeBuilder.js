@@ -102,7 +102,7 @@ bio.display = function() {
   } else {
     console.log("No Skills");
   }
-}
+};
 bio.display();
 
 // Work Section
@@ -121,7 +121,7 @@ work.display = function() {
 
     $("#workExperience").append(workSection);
   }
-}
+};
 work.display();
 
 // Project section
@@ -143,7 +143,7 @@ projects.display = function() {
     }
 
   }
-}
+};
 
 projects.display();
 
@@ -162,18 +162,18 @@ education.display = function() {
 
   $("#education").append(HTMLonlineClasses);
 
-  for(var i = 0; i < education.onlineCourses.length; ++i) {
-    courseTitle = dataReplace(HTMLonlineTitle, education.onlineCourses[i].title);
-    courseSchool = dataReplace(HTMLonlineSchool, education.onlineCourses[i].school);
-    courseDates = dataReplace(HTMLonlineDates, education.onlineCourses[i].dates);
-    courseURL = dataReplace(HTMLonlineURL, education.onlineCourses[i].url);
+  for(var j = 0; j < education.onlineCourses.length; ++j) {
+    courseTitle = dataReplace(HTMLonlineTitle, education.onlineCourses[j].title);
+    courseSchool = dataReplace(HTMLonlineSchool, education.onlineCourses[j].school);
+    courseDates = dataReplace(HTMLonlineDates, education.onlineCourses[j].dates);
+    courseURL = dataReplace(HTMLonlineURL, education.onlineCourses[j].url);
 
     var courseSection = courseTitle + courseSchool + courseDates + courseURL;
     courseSection = dataReplace(HTMLschoolStart, courseSection);
     $("#education").append(courseSection);
 
   }
-}
+};
 
 education.display();
 
