@@ -21,7 +21,7 @@ var education = {
       "name" : "Troy University",
       "location" : "Alabama",
       "degree" : "bachelors of science",
-      "majors" : "Applied Computer Science",
+      "majors" : ["Applied Computer Science"],
       "dates" : "August 2015 - Present",
       "url" : "http://www.troy.edu/"
     }
@@ -52,9 +52,10 @@ var work = {
 };
 
 var projects = {
-  "project" : [
+  "projects" : [
     {
       "title" : "Portfolio",
+      "dates" : "July 2017",
       "description" : "A portfolio website showcasing skills and expereince and built utilizing HTML, CSS, Javascript, jQuery, and Bootstrap. ",
       "images" : [
         "images/computer.jpg",
@@ -83,7 +84,7 @@ bio.display = function() {
   contactEmail = dataReplace(HTMLemail, bio.contacts.email);
   contactGithub = dataReplace(HTMLgithub, bio.contacts.github);
   contactLocation = dataReplace(HTMLlocation, bio.contacts.location);
-  $("#header").append(contactMobile, contactEmail, contactGithub, contactLocation);
+  $("#topContacts, #footerContacts").append(contactMobile, contactEmail, contactGithub, contactLocation);
 
   bioPic = dataReplace(HTMLbioPic, bio.biopic);
   welcomeMsg = dataReplace(HTMLwelcomeMsg, bio.welcomeMessage);
@@ -127,17 +128,17 @@ work.display();
 // Project section
 
 projects.display = function() {
-  for(var i = 0; i < projects.project.length; ++i) {
+  for(var i = 0; i < projects.projects.length; ++i) {
     $("#projects").append(HTMLprojectStart);
-    projectTitle = dataReplace(HTMLprojectTitle, projects.project[i].title);
-    projectTitle = projectTitle.replace("#", projects.project[i].url);
-    projectDescription = dataReplace(HTMLprojectDescription, projects.project[i].description);
+    projectTitle = dataReplace(HTMLprojectTitle, projects.projects[i].title);
+    projectTitle = projectTitle.replace("#", projects.projects[i].url);
+    projectDescription = dataReplace(HTMLprojectDescription, projects.projects[i].description);
     
     var projectSection = projectTitle + projectDescription;
     $(".project-entry").append(projectSection);
 
-    for(var j = 0; j < projects.project[i].images.length; ++j) {
-      projectImage = dataReplace(HTMLprojectImage, projects.project[i].images[j]);
+    for(var j = 0; j < projects.projects[i].images.length; ++j) {
+      projectImage = dataReplace(HTMLprojectImage, projects.projects[i].images[j]);
       $(".project-entry").append(projectImage);
 
     }
